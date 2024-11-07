@@ -1,3 +1,7 @@
+/*
+Old obsolete stuff.
+
+
 // Copyright Eric Chauvin 2024.
 
 
@@ -22,8 +26,6 @@ using System.Net.Sockets;
 
 class TlsClient
 {
-/*
-
   private NetworkStream NetStream;
   private TcpClient Client;
   private string StatusString = "";
@@ -47,10 +49,6 @@ class TlsClient
     Client.SendTimeout = 30 * 1000;
     LastReadWriteTime = new ECTime();
     LastReadWriteTime.SetToNow();
-
-    OuterAESEncrypt = new AESEncryption();
-    Copyright += " 2015. All rights reserved.";
-    OuterAESEncrypt.SetKey( Copyright );
     }
 
 
@@ -470,8 +468,10 @@ class TlsClient
     {
     return PayloadString;
     }
-*/
+
 
 
 
 } // Class
+
+*/

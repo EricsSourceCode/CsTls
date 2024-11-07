@@ -313,7 +313,7 @@ return 0;
 
 
 // Client:
-=======
+
 
 
 /*
@@ -383,7 +383,7 @@ SslStream sslStream = new SslStream(
     new RemoteCertificateValidationCallback
                  (ValidateServerCertificate),
     null );
-    
+
 // The server name must match the
 // name on the server certificate.
 try
@@ -446,7 +446,7 @@ do
   // in case a character spans two buffers.
   Decoder decoder = Encoding.UTF8.GetDecoder();
   char[] chars = new char[
-         decoder.GetCharCount( 
+         decoder.GetCharCount(
                           buffer, 0, bytes)];
   decoder.GetChars(buffer, 0, bytes, chars,0);
   messageData.Append (chars);
@@ -466,4 +466,3 @@ return messageData.ToString();
 
 
 }  // Class
-
