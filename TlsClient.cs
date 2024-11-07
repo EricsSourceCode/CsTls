@@ -11,7 +11,6 @@
 
 
 using System;
-// using System.Collections.Generic;
 // using System.Text;
 using System.Threading;
 using System.Net.Sockets;
@@ -33,7 +32,6 @@ class TlsClient
   private int RawBufferLast = 0;
   private const int MaximumBufferLength = 1024 * 1024 * 64;
   // private int PayloadSize = 0;
-  private AESEncryption OuterAESEncrypt;
   private int AtSymbolPosition = 0;
   private string Command = "";
   private string PayloadString = "";
@@ -42,9 +40,8 @@ class TlsClient
 
 
 
-  internal BinaryTcpClient()
+  internal TlsClient()
     {
-    string Copyright = "Copyright Mineralab";
     Client = new TcpClient();
     Client.ReceiveTimeout = 45 * 1000;
     Client.SendTimeout = 30 * 1000;
@@ -126,11 +123,6 @@ class TlsClient
     }
 
 
-
-// 80 is very old RN client or Web.
-// 2014 is RN client
-// 2015 is Mineral Search
-// 2016 is new binary RN client.
 
 
   internal bool Connect( string ServerIP ) // , int ServerPort )
@@ -434,7 +426,9 @@ class TlsClient
 
 
 
-    /*
+
+
+//////////////////
     string[] SplitHeader = SplitS[0].Split( new Char[] { ';' } );
     if( SplitHeader.Length < 2 )
       {
@@ -447,7 +441,10 @@ class TlsClient
 
     string TempN = SplitHeader[1].Replace( ",", "" );
     PayloadSize = Int32.Parse( TempN );
-    */
+/////////////////////
+
+
+
     return true;
 
     }
@@ -478,4 +475,3 @@ class TlsClient
 
 
 } // Class
-
